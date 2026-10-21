@@ -1,0 +1,14 @@
+services:
+  outlook-api:
+    build: .
+    container_name: outlook-downloader
+    ports:
+      - "8000:8000"
+    volumes:
+      # Sincronización en vivo con tu máquina anfitriona
+      - ./sesion.json:/app/sesion.json
+      - ./conversaciones.json:/app/conversaciones.json
+      - ./Reportes:/app/Reportes
+      - ./Correos.xlsx:/app/Correos.xlsx
+    restart: unless-stopped
+

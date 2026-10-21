@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.gemini/
+
+# Seguridad: No subir credenciales ni cookies a repositorios
+sesion.json
+cookies.json
+
